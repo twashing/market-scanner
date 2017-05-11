@@ -1,13 +1,11 @@
-(defproject com.interrupt/ibgateway "0.1.0-SNAPSHOT"
+(defproject com.interrupt/market-scanner "0.1.0-SNAPSHOT"
   :description "Platform code for the edgar trading system"
-  :url "https://github.com/twashing/ibgateway"
+  :url "https://github.com/twashing/market-scanner"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   ;; :pedantic? :abort
   :repositories [["myMavenRepo.read" "https://mymavenrepo.com/repo/HaEY4usKuLXXnqmXBr0z"]
-                 ["my.datomic.com" {:url "https://my.datomic.com/repo"
-                                    :creds :gpg}]
                  ["confluent" {:url "http://packages.confluent.io/maven/"}]
                  ["snapshots" {:url "https://fundingcircle.artifactoryonline.com/fundingcircle/libs-snapshot-local"
                                :username "tim.washington"
@@ -30,14 +28,10 @@
                  [aero "1.1.2"]
                  [com.stuartsierra/component "0.3.2"]
                  [org.danielsz/system "0.4.1-SNAPSHOT"]
-
-                 [com.interactivebrokers.tws/tws-api "9.72.17-SNAPSHOT"]
                  [compojure "1.5.0"]
                  [org.clojure/core.async "0.3.441"]
                  [org.clojure/core.match "0.3.0-alpha4"]
                  [org.clojure/math.combinatorics "0.1.4"]
-
-                 [org.apache.kafka/kafka_2.11 "0.10.1.1" :exclusions [org.slf4j/slf4j-log4j12]]
                  [org.onyxplatform/onyx "0.10.0-beta12"]
                  [org.onyxplatform/onyx-kafka "0.10.0.0-beta12"]
                  [ymilky/franzy "0.0.1"]
@@ -46,9 +40,6 @@
 
                  [org.clojure/core.match "0.3.0-alpha4"]
                  [com.rpl/specter "1.0.0"]
-                 #_[com.datomic/clj-client "0.8.606"]
-                 #_[com.datomic/datomic-pro "0.9.5561"]
-                 [com.datomic/datomic-free "0.9.5561"]
                  [org.clojure/test.check "0.9.0"]
                  [clojure-future-spec "1.9.0-alpha15"]
                  [spyscope "0.1.5"]]
@@ -65,4 +56,4 @@
   :repl-options {:init-ns user}
   :injections [(require 'spyscope.core)]
 
-  :main com.interrupt.ibgateway.core)
+  :main com.interrupt.market-scanner.core)
